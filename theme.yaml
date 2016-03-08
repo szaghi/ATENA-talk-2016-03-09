@@ -1,0 +1,100 @@
+---
+theme:
+  - canvas:
+    - background: 'radial-gradient(rgb(240, 240, 240), rgb(110, 110, 110))'
+  - ordered-list-items:
+    - content: 'counter(item, lower-alpha)'
+    - color: '#4788B3'
+  - unordered-list-items:
+    - color: '#4788B3'
+  - slide:
+    # global slide
+    - transition: 'absolute'
+    - width: '900px'
+    - height: '700px'
+    - color: 'rgb(102,102,102)'
+    - font-size: '100%'
+    - data-offset: '20'
+    # elements
+    - content:
+      - border-bottom-left-radius: '30%'
+      - border-bottom-right-radius: '30%'
+      - background: 'white'
+      - color: 'rgb(102,102,102)'
+      - padding: '2%'
+    - header-1:
+      - border-radius: '30%'
+      - height: '6%'
+      - padding: '1% 2%'
+      - background: '#4788B3'
+      - color: 'white'
+      - metadata:
+        - slidetitle:
+          - padding: '0% 0%'
+          - font-size: '150%'
+          - float: 'left'
+          - font-variant: 'small-caps'
+        - logo: 
+          - height: '100%'
+          - float: 'right'
+        - timer:
+          - controls: ''
+          - font-size: '70%'
+          - font-variant: 'small-caps'
+          - float: 'right'
+    - header-2:
+      - height: '2%'
+  - figure:
+    - font-variant: 'small-caps'
+    - text-align: 'center'
+    - caption: 
+      - font-size: '80%' 
+      - color: '#4788B3'
+    - content:
+      - padding: '1% 5%'
+      - box-shadow: '5px 5px 3px rgba(200,200,200,0.3)'
+      - border-radius: '15px'
+  - video:
+    - font-variant: 'small-caps'
+    - text-align: 'center'
+    - caption: 
+      - font-size: '80%' 
+      - color: '#4788B3'
+    - content:
+      - controls: ''
+      - autoplay: ''
+      - padding: '1% 5%'
+      - box-shadow: '5px 5px 3px rgba(200,200,200,0.3)'
+      - border-radius: '15px'
+  - table:
+    - caption: 
+      - padding: '2% 2%'
+      - color: '#4788B3'
+      - display: 'inline-block'
+  - note:
+    - display: 'inline-block'
+    - font-variant: 'small-caps'
+    - box-shadow: '7px 7px 5px rgba(200,200,200,0.3)'
+    - border-radius: '20px'
+    - caption: 
+      - padding: '0 2%'
+      - color: '#4788B3'
+      - border-bottom: '1px solid #4788B3'
+      - display: 'inline-block'
+    - content: 
+      - padding: '0 2%'
+      - font-size: '120%'
+  - box:
+    - display: 'inline-block'
+    - font-variant: 'small-caps'
+    - box-shadow: '7px 7px 5px rgba(200,200,200,0.3)'
+    - border-radius: '20px'
+    - caption: 
+      - padding: '0 2%'
+      - color: 'red'
+      - border-bottom: '1px solid #4788B3'
+      - display: 'inline-block'
+    - content: 
+      - padding: '0 2%'
+      - font-size: '120%'
+---

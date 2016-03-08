@@ -1,0 +1,39 @@
+---
+metadata:
+  - title: "Research & Design in Ships Hydrodynamics: an overview of the cutting-edge numerical experiments at CNR-INSEAN"
+  - authors:
+    - Riccardo Broglia
+    - Roberto Muscari
+    - Giulio Dubbioso
+    - Danilo Durante
+    - Stefano Zaghi
+  - authors_short:
+    - R. Broglia
+    - R. Muscari
+    - G. Dubbioso
+    - D. Durante
+    - S. Zaghi
+  - emails:
+    - riccardo.broglia@cnr.it
+    - roberto.muscari@cnr.it
+    - giulioantonino.dubbioso@cnr.it
+    - danilo.durante@cnr.it
+    - stefano.zaghi@cnr.it
+  - affiliations:
+    - CNR-INSEAN, Marine Technology Research Institute
+  - affiliations_short:
+    - CNR-INSEAN
+  - location: Polo Marconi, Via dei Colli 90, La Spezia
+  - date: 9 Marzo, 2016
+  - conference: "Idrodinamica numerica e sperimentale - Stato dell'arte"
+  - logo: figures/cnr-insean.png
+  - max_time: 15
+  - toc_depth: 4
+  - dirs_to_copy:
+    - figures
+    - videos
+    - css
+  - css_overtheme:
+    - css/figure_zoom.css
+    - css/table.css
+---

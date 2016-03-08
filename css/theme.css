@@ -1,0 +1,112 @@
+
+ body {
+  background: radial-gradient(rgb(240, 240, 240), rgb(110, 110, 110));
+}
+ ol li:before {
+  content: counter(item, lower-alpha);
+  color: #4788B3;
+}
+ ul li:before {
+  color: #4788B3;
+}
+.slide {
+  transition: absolute;
+  width: 900px;
+  height: 700px;
+  color: rgb(102,102,102);
+  font-size: 100%;
+  data-offset: 20;
+  display: block;
+}
+ .slide-content {
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  background: white;
+  color: rgb(102,102,102);
+  padding: 2%;
+  display: block;
+  float: left;
+  width: 100%;
+  height: 92%;
+}
+ .slide-header-1 {
+  border-radius: 30%;
+  height: 6%;
+  padding: 1% 2%;
+  background: #4788B3;
+  color: white;
+  display: block;
+  active: yes;
+  width: 100%;
+}
+ .slide-header-2 {
+  height: 2%;
+  display: block;
+  active: yes;
+  width: 100%;
+}
+ .box {
+  display: inline-block;
+  font-variant: small-caps;
+  box-shadow: 7px 7px 5px rgba(200,200,200,0.3);
+  border-radius: 20px;
+}
+ .box-caption {
+  padding: 0 2%;
+  color: red;
+  border-bottom: 1px solid #4788B3;
+  display: inline-block;
+}
+ .box-content {
+  padding: 0 2%;
+  font-size: 120%;
+}
+ .note {
+  display: inline-block;
+  font-variant: small-caps;
+  box-shadow: 7px 7px 5px rgba(200,200,200,0.3);
+  border-radius: 20px;
+}
+ .note-caption {
+  padding: 0 2%;
+  color: #4788B3;
+  border-bottom: 1px solid #4788B3;
+  display: inline-block;
+}
+ .note-content {
+  padding: 0 2%;
+  font-size: 120%;
+}
+ .table-caption {
+  padding: 2% 2%;
+  color: #4788B3;
+  display: inline-block;
+}
+ .figure {
+  font-variant: small-caps;
+  text-align: center;
+}
+ .figure-caption {
+  font-size: 80%;
+  color: #4788B3;
+}
+ .figure-content {
+  padding: 1% 5%;
+  box-shadow: 5px 5px 3px rgba(200,200,200,0.3);
+  border-radius: 15px;
+}
+ .video {
+  font-variant: small-caps;
+  text-align: center;
+}
+ .video-caption {
+  font-size: 80%;
+  color: #4788B3;
+}
+ .video-content {
+  controls: ;
+  autoplay: ;
+  padding: 1% 5%;
+  box-shadow: 5px 5px 3px rgba(200,200,200,0.3);
+  border-radius: 15px;
+}

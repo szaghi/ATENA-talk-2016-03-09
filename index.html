@@ -1,57 +1,965 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Atena-talk-2016-03-09 by szaghi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <meta charset="utf-8" />
+    <meta author="Riccardo Broglia and Roberto Muscari and Giulio Dubbioso and Danilo Durante and Stefano Zaghi" />
+    <title>Research &amp; Design in Ships Hydrodynamics: an overview of the cutting-edge numerical experiments at CNR-INSEAN</title>
+    <meta subtitle="" />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/matisse_defaults.css" rel="stylesheet" />
+    <link href="css/matisse_defaults_printing.css" rel="stylesheet" />
+    <link href="js/highlight/styles/github.css" rel="stylesheet" />
+    <link href="css/theme.css" rel="stylesheet" />
+    <link href="css/figure_zoom.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+    <link href="css/slide-0-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-1-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-2-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-3-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-4-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-5-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-6-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-7-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-8-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-9-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-10-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-11-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-12-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-13-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-14-overtheme.css" rel="stylesheet" />
+    <link href="css/slide-15-overtheme.css" rel="stylesheet" />
   </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Atena-talk-2016-03-09</h1>
-      <h2 class="project-tagline">a talk for ATENA workshop</h2>
-      <a href="https://github.com/szaghi/ATENA-talk-2016-03-09" class="btn">View on GitHub</a>
-      <a href="https://github.com/szaghi/ATENA-talk-2016-03-09/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/szaghi/ATENA-talk-2016-03-09/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
-
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
-
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/szaghi/ATENA-talk-2016-03-09">Atena-talk-2016-03-09</a> is maintained by <a href="https://github.com/szaghi">szaghi</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
+  <body onload="resetCountdown(15);" class="impress-not-supported">
+    <div id="impress">
+      <div data-scale="10" subsectionnumber="1" sectiontitle="" chapternumber="1" id="slide-0" data-y="0" data-x="9090.0" data-z="0" subsectiontitle="CFD at CNR-INSEAN" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div class="slide-content">
+          <div style="border-top-left-radius:0%;
+       border-top-right-radius:100px;
+       border-bottom-right-radius:0px;
+       width:100%;
+       margin-left:0%;
+       margin-top:0%;
+       height:30%;
+       background:#4788B3;
+       font-family:'Comic Sans MS', cursive, sans-serif;" id="box-1">
+            <div style="width:95%;
+         color:white;
+         text-align:center;" class="box-content">
+              <span style="display:block;
+       font-size:140%;
+       padding-top:3%;
+       padding-bottom:3%;
+       padding-right:2%;" class="metadata">Research &amp; Design in Ships Hydrodynamics: an overview of the cutting-edge numerical experiments at CNR-INSEAN</span>
+              <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="margin-left:55%;height:50px;" />
+            </div>
+          </div>
+          <div class="columns">
+            <div style="display:block;float:left;width:45%;" class="column" column-number="1">
+              <div id="Figure-1" class="figure">
+                <figure>
+                  <img src="figures/atena.jpg" style="width:90%;
+         padding-top:3%;
+         box-shadow: 7px 7px 5px rgba(200,200,200,0.0);" class="figure-content" alt="Figure-figures/atena.jpg" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:55%;" class="column" column-number="2">
+              <div style="width:100%;
+       padding-top:2%;
+       font-family:'Comic Sans MS', cursive, sans-serif;" id="box-2">
+                <div style="text-align:center;
+         color:#4788B3;" class="box-content">
+                  <span style="display:block;
+            font-size:130%;
+            padding-right:10%;
+            padding-top:5%;" class="metadata">Idrodinamica numerica e sperimentale - Stato dell&rsquo;arte</span>
+                  <span style="display:block;
+          font-size:80%;
+          text-align:right;
+          padding-right:10%;
+          padding-top:5%;" class="metadata">Polo Marconi, Via dei Colli 90, La Spezia</span>
+                  <span style="display:block;
+      font-size:80%;
+      text-align:right;
+      padding-right:10%;" class="metadata">9 Marzo, 2016</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p></p>
+          <div style="width:100%;
+       font-family:'Comic Sans MS', cursive, sans-serif;" id="box-3">
+            <div style="text-align:left;padding-left:1%;" class="box-content">a presentation by <span style="display:block;font-size:110%;color:#4788B3;" class="metadata">Riccardo Broglia, Roberto Muscari, Giulio Dubbioso, Danilo Durante, Stefano Zaghi</span><p></p><p></p><span style="display:block;font-size:80%;padding-right:2%" class="metadata">riccardo.broglia@cnr.it, roberto.muscari@cnr.it, giulioantonino.dubbioso@cnr.it, danilo.durante@cnr.it, stefano.zaghi@cnr.it</span><p></p><p></p><span style="display:block;font-size:100%;padding-left:5%" class="metadata">CNR-INSEAN, Marine Technology Research Institute</span></div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="1" sectiontitle="" chapternumber="1" id="slide-1" data-y="-3000" data-x="14100" data-z="0" subsectiontitle="CFD at CNR-INSEAN" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">CFD at CNR-INSEAN</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div class="columns">
+            <div style="display:block;float:left;width:30%" class="column" column-number="1">
+              <div id="note-1" class="note">
+                <div class="note-caption">Applications</div>
+                <div class="note-content">
+                  <p>Fluid dynamic studies concerning complex-shaped moving bodies for:</p>
+                  <ul>
+                    <li>Hydrodynamics:<ul><li>resistance;</li><li>manoeuvrability and stability;</li><li>propellers/appendages/hulls interactions;</li><li>sea&ndash;keeping.</li><li>underwater noise;</li><li>multiphase flows.</li></ul></li>
+                    <li>aerodynamics:<ul><li>airplanes;</li><li>wind turbines.</li><li>aerospace launchers;</li></ul></li>
+                  </ul>
+                </div>
+              </div>
+              <div id="Figure-2" class="figure">
+                <figure>
+                  <div style="font-size:110%" class="figure-caption">Manoeuvrability</div>
+                  <img src="figures/subm/subm00.png" style="width:220%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm00.png" />
+                </figure>
+              </div>
+              <p></div>
+              <div style="display:block;float:left;width:30%" class="column" column-number="2">
+                <div id="Figure-3" class="figure">
+                  <figure>
+                    <div style="font-size:110%" class="figure-caption">Propulsion</div>
+                    <img src="figures/prop/prop11.png" style="width:140%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop11.png" />
+                  </figure>
+                </div>
+              </p>
+              <div id="Figure-4" class="figure">
+                <figure>
+                  <div style="font-size:110%" class="figure-caption">Renewable Energy</div>
+                  <img src="figures/bt2/bt2-01.png" style="width:140%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/bt2-01.png" />
+                </figure>
+              </div>
+              <p></div>
+              <div style="display:block;float:left;width:30%" class="column" column-number="3">
+                <div id="Figure-5" class="figure">
+                  <figure>
+                    <div style="font-size:110%" class="figure-caption">Gas Dynamics</div>
+                    <img src="figures/vega/vega.png" style="width:160%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/vega/vega.png" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="1" sectiontitle="" chapternumber="1" id="slide-2" data-y="-2200" data-x="14100" data-z="0" subsectiontitle="CFD at CNR-INSEAN" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Xnavis CFD solver</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div id="note-2" class="note">
+            <div class="note-caption">Xnavis Code Features</div>
+            <div class="note-content">Xnavis is an in-house (Fortran language, standard 95) fluid dynamics code solver</div>
+          </div>
+          <p></p>
+          <div class="columns">
+            <div style="display:block;float:left;width:50%;font-size:90%" class="column" column-number="1">
+              <div id="note-3" class="note">
+                <div class="note-caption">Modeling features 1/2</div>
+                <div class="note-content"></div>
+              </div>
+              <p></p>
+              <ul>
+                <li>Solver based on the Unsteady Navier-Stokes Equations:<ul><li>Reynolds Averaged Equations, <strong>RANS</strong>;</li><li><strong>LES</strong> Filtered Equations;</li><li><strong>DES</strong> (and <strong>DDES</strong>) Equations.</li></ul></li>
+                <li>finite volume formulation, co-located cell centred;</li>
+                <li>spatial discretization:<ul><li>convection and pressure:<ul><li>second order <strong>ENO</strong>-type (Harten et al., 1987);</li><li>third order upwind biased (van Leer, 1979);</li><li>third order <strong>WENO</strong>-type (Liu et al., 1994; Jiang et al., 1996);</li><li>fourth order centred.</li></ul></li><li>viscous terms: second order centred.</li></ul></li>
+                <li>time integration by second order implicit scheme (three points backward);</li>
+                <li>solution at each time step: pseudo-time integration (Chorin, 1967; Merkle 1987):<ul><li>Euler implicit with approximate factorization (Beam <mathjax>$\&amp;$</mathjax> Warming, 1978);</li><li>local pseudo time step, multi-grid acceleration.</li></ul></li>
+                <li>turbulence model: algebraic, one-equation and two-equations, LES, DES.</li>
+                <li>propeller model:<ul><li>non interactive Hough <mathjax>$\&amp;$</mathjax> Ordway (nominal wake);</li><li>interactive RANS/BEM coupling  (effective wake);</li><li>direct simulation of the propeller (No Model).</li></ul></li>
+                <li>single and two-phase level set approach for free surface;</li>
+              </ul>
+            </div>
+            <div style="display:block;float:left;width:50%" class="column" column-number="2">
+              <div id="note-4" class="note">
+                <div class="note-caption">Modeling features 2/2</div>
+                <div class="note-content"></div>
+              </div>
+              <p></p>
+              <ul>
+                <li>dynamic overlapping grids;</li>
+                <li>multiple bodies 6 D.O.F. dynamics;</li>
+                <li>multi&ndash;paradigms parallelization:<ul><li>OpenMP paradigm for shared memory architectures;</li><li>Message Passing Interface (MPI) paradigm for distributed memory architectures;</li><li>OpenMP/MPI mixed paradigm for large distributed cluster of SMP nodes.</li></ul></li>
+              </ul>
+              <div id="note-5" class="note">
+                <div class="note-caption">Ongoing and Future Developments</div>
+                <div class="note-content"></div>
+              </div>
+              <p></p>
+              <ul>
+                <li>adaptive mesh refinement (AMR);</li>
+                <li>automatic dynamic control;</li>
+                <li>interior noise prediction and control with smart dynamics solver and LQR optimal control;</li>
+                <li>HPC enhancement: automatic load balancing for thousands of processors with huge mesh size;</li>
+                <li>cavitation models (barotropic and mass transfer ones);</li>
+                <li>two&ndash;way, fully coupled, unsteady hydro&ndash;elasticity models (one&ndash;way steady model already implemented);</li>
+                <li>&hellip;</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="1" sectiontitle="" chapternumber="1" id="slide-3" data-y="-1400" data-x="14100" data-z="0" subsectiontitle="CFD at CNR-INSEAN" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Original in-house Chimera scheme</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div id="note-6" class="note">
+            <div class="note-caption">Chimera scheme</div>
+            <div class="note-content">Xnavis is supplemented with an original, in-house developed chimera approach that is based on a body-force like interpolation between overlapping grids. This scheme is robust and effective and it allows high quality spatial discretization of very complex-shaped bodies even in relative motion.</div>
+          </div>
+          <div class="columns">
+            <div style="display:block;float:left;width:30%" class="column" column-number="1">
+              <div id="Figure-6" class="figure">
+                <figure>
+                  <img src="figures/subm/subm05.png" style="width:135%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm05.png" />
+                </figure>
+              </div>
+              <div id="Figure-7" class="figure">
+                <figure>
+                  <img src="figures/subm/subm07.png" style="width:135%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm07.png" />
+                </figure>
+              </div>
+              <div id="Figure-8" class="figure">
+                <figure>
+                  <img src="figures/subm/subm08.png" style="width:135%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm08.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:65%" class="column" column-number="2">
+              <div id="video-1" class="video">
+                <video style="margin-top:10%;width:90%;;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="video-content" controls="controls" autoplay="autoplay">
+                  <source src="videos/rudder.m4v" />
+                </video>
+                <div class="video-caption">Dynamic Chimera Grids</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="2" sectiontitle="" chapternumber="1" id="slide-4" data-y="-600" data-x="14050" data-z="0" subsectiontitle="Hydrodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Propulsion: Propeller with axial inflow</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div id="note-7" class="note">
+            <div class="note-caption">Simulation Details</div>
+            <div class="note-content">DES simulations of E779A propeller in open water with axial inflow in open water characteristics</div>
+          </div>
+          <div class="columns">
+            <div style="display:block;float:left;width:33%" class="column" column-number="1">
+              <div id="Figure-9" class="figure">
+                <figure>
+                  <img src="figures/prop/prop7.png" style="width:110%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop7.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:33%" class="column" column-number="2">
+              <div id="Figure-10" class="figure">
+                <figure>
+                  <img src="figures/prop/prop8.png" style="width:110%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop8.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:33%" class="column" column-number="3">
+              <div id="Figure-11" class="figure">
+                <figure>
+                  <img src="figures/prop/prop9.png" style="width:110%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop9.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div style="display:block;float:left;width:50%" class="column" column-number="1">
+              <p>High value of angular velocity. High turbulence generation.</p>
+              <div id="Figure-12" class="figure">
+                <figure>
+                  <img src="figures/prop/prop11.png" style="width:110%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop11.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:50%" class="column" column-number="2">
+              <p>Low value of angular velocity. Low turbulence value.</p>
+              <div id="Figure-13" class="figure">
+                <figure>
+                  <img src="figures/prop/prop12.png" style="width:110%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop12.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="2" sectiontitle="" chapternumber="1" id="slide-5" data-y="200" data-x="13900" data-z="0" subsectiontitle="Hydrodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Propulsion: Propeller beneath the free-surface</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div id="note-8" class="note">
+            <div class="note-caption">Simulation Details</div>
+            <div class="note-content">uRaNSe simulations of E779A propeller in open water with non axial inflow beneath the free-surface</div>
+          </div>
+          <div class="columns">
+            <div style="display:block;float:left;width:55%" class="column" column-number="1">
+              <div id="Figure-14" class="figure">
+                <figure>
+                  <img src="figures/prop/prop17.png" style="width:90%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop17.png" />
+                </figure>
+              </div>
+              <div id="Figure-15" class="figure">
+                <figure>
+                  <img src="figures/prop/prop18.png" style="width:90%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop18.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:45%" class="column" column-number="2">
+              <div id="Figure-16" class="figure">
+                <figure>
+                  <img src="figures/prop/prop19.png" style="width:90%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop19.png" />
+                </figure>
+              </div>
+              <div id="Figure-17" class="figure">
+                <figure>
+                  <img src="figures/prop/prop20.png" style="width:90%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/prop/prop20.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="2" sectiontitle="" chapternumber="1" id="slide-6" data-y="1000" data-x="13600" data-z="0" subsectiontitle="Hydrodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Maneuvering: Free Running of Tanker-Like Model 1/2</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div class="columns">
+            <div style="display:block;float:left;width:48%;margin-right:2%" class="column" column-number="1">
+              <div id="note-9" class="note">
+                <div class="note-caption">Aims</div>
+                <div class="note-content">
+                  <p>Two different configurations, single and twin rudders:</p>
+                  <ul>
+                    <li>assessment of the capabilities of the CFD solver;</li>
+                    <li>analysis of the manoeuvring characteristics of the two models;</li>
+                    <li>analysis of the flow field.</li>
+                  </ul>
+                </div>
+              </div>
+              <p></p>
+              <div id="Figure-18" class="figure">
+                <figure>
+                  <img src="figures/turningcirc/tc-04.png" style="width:105%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/turningcirc/tc-04.png" />
+                </figure>
+              </div>
+              <p></div>
+              <div style="display:block;float:left;width:50%" class="column" column-number="2">
+                <div id="note-10" class="note">
+                  <div class="note-caption">Main Dimensions</div>
+                  <div class="note-content">Twin rudder plus skeg configuration: a total of about 7.8M of finite volumes distributed in 282 blocks.</p>
+                  <p>For the free surface refinement there are 2 blocks for a total of 2M of finite volumes, for the hull there are 18 blocks with 2.7M volumes and for the rudders there are 208 blocks with 2.2M volumes.</div>
+                </div>
+              </p>
+              <p></p>
+              <div id="Figure-19" class="figure">
+                <figure>
+                  <img src="figures/turningcirc/tc-05.png" style="width:105%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/turningcirc/tc-05.png" />
+                </figure>
+              </div>
+              <p></div>
+            </div>
+          </p>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="2" sectiontitle="" chapternumber="1" id="slide-7" data-y="1800" data-x="13200" data-z="0" subsectiontitle="Hydrodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Maneuvering: Free Running of Tanker-Like Model 2/2</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div id="video-2" class="video">
+            <video style="margin-top:1%;width:95%;" class="video-content" controls="controls" autoplay="autoplay">
+              <source src="videos/turncir.m4v" />
+            </video>
+            <div class="video-caption">Trajectory of Turning Cirle Manouvre</div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="2" sectiontitle="" chapternumber="1" id="slide-8" data-y="2600" data-x="12500" data-z="0" subsectiontitle="Hydrodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Captive Tests of Submarine 1/2</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div class="columns">
+            <div style="display:block;float:left;width:18%" class="column" column-number="1">
+              <div id="Figure-20" class="figure">
+                <figure>
+                  <img src="figures/subm/subm01.png" style="height:4cm;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm01.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:54%" class="column" column-number="2">
+              <div id="Figure-21" class="figure">
+                <figure>
+                  <img src="figures/subm/subm04.png" style="height:4cm;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm04.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:26%" class="column" column-number="3">
+              <div id="Figure-22" class="figure">
+                <figure>
+                  <img src="figures/subm/subm03.png" style="height:4cm;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm03.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div style="display:block;float:left;width:25%" class="column" column-number="1">
+              <div id="Figure-23" class="figure">
+                <figure>
+                  <img src="figures/subm/subm05.png" style="width:120%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm05.png" />
+                </figure>
+              </div>
+              <div id="Figure-24" class="figure">
+                <figure>
+                  <img src="figures/subm/subm07.png" style="width:120%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm07.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:25%" class="column" column-number="2">
+              <div id="Figure-25" class="figure">
+                <figure>
+                  <img src="figures/subm/subm06.png" style="width:120%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm06.png" />
+                </figure>
+              </div>
+              <div id="Figure-26" class="figure">
+                <figure>
+                  <img src="figures/subm/subm08.png" style="width:120%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/subm08.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:50%" class="column" column-number="3">
+              <div id="note-11" class="note">
+                <div class="note-caption">SUBMOTION II Project</div>
+                <div class="note-content">
+                  <ul>
+                    <li>European Defense Agency (EDA) project:<ul><li>strong collaboration of:<ul><li>Italian and Norwegian Navy;</li><li>CNR-INSEAN and MARINTEK Institute;</li></ul></li></ul></li>
+                    <li>aims:<ul><li>assessment of the capabilities of the CFD solver;</li><li>analysis of the manoeuvring characteristics of two submarine configurations;</li><li>improve the overall confidence on prediction tools employed;</li></ul></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="2" sectiontitle="" chapternumber="1" id="slide-9" data-y="3300" data-x="11450" data-z="0" subsectiontitle="Hydrodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Captive Tests of Submarine 2/2</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div class="columns">
+            <div style="display:block;float:left;width:50%" class="column" column-number="1">
+              <div id="Figure-27" class="figure">
+                <figure>
+                  <div class="figure-caption">Pitch submarine 12 deg, canard angle of attack 0 deg</div>
+                  <img src="figures/subm/pitch/p_m14deg-x-slice-u-fore.png" style="width:100%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/pitch/p_m14deg-x-slice-u-fore.png" />
+                </figure>
+              </div>
+              <div id="Figure-28" class="figure">
+                <figure>
+                  <div class="figure-caption">Pitch submarine 12 deg, canard angle of attack 0 deg</div>
+                  <img src="figures/subm/pitch/p_m14deg-x-slice-u-stern.png" style="width:100%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/pitch/p_m14deg-x-slice-u-stern.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:50%" class="column" column-number="2">
+              <div id="Figure-29" class="figure">
+                <figure>
+                  <div class="figure-caption">Pitch submarine 12 deg, canard angle of attack -10 deg</div>
+                  <img src="figures/subm/pitch/p_m12deg-c_m10deg-x-slice-u-fore.png" style="width:100%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/pitch/p_m12deg-c_m10deg-x-slice-u-fore.png" />
+                </figure>
+              </div>
+              <div id="Figure-30" class="figure">
+                <figure>
+                  <div class="figure-caption">Pitch submarine 12 deg, canard angle of attack -10 deg</div>
+                  <img src="figures/subm/pitch/p_m12deg-c_m10deg-x-slice-u-stern.png" style="width:100%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/subm/pitch/p_m12deg-c_m10deg-x-slice-u-stern.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="2" sectiontitle="" chapternumber="1" id="slide-10" data-y="3800" data-x="10400" data-z="0" subsectiontitle="Hydrodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Free surface flow: fast catamarans 1/2</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <p>Catamaran advancing in steady drift <em>6deg</em>, <em>Fr=0.4</em></p>
+          <div class="columns">
+            <div style="display:block;float:left;width:40%" class="column" column-number="1">
+              <div id="note-12" class="note">
+                <div class="note-caption">NICOP Catamarans</div>
+                <div class="note-content">
+                  <ul>
+                    <li>Office of Naval Research (US Navy) project:<ul><li>strong collaboration of:<ul><li>IIHR-Hydroscience and Engineering of University of Iowa;</li><li>CNR-INSEAN;</li></ul></li></ul></li>
+                    <li>aims:<ul><li>gain more insight into the knowledge of the hydrodynamics of fast catamaran vessels;</li><li>construct a valuable data set for CFD benchmarking;</li><li>sea keeping behavior and operation in off design conditions (static large drift conditions);</li></ul></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:60%" class="column" column-number="2">
+              <div id="Figure-31" class="figure">
+                <figure>
+                  <img src="figures/cat/cat4.png" style="width:90%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/cat/cat4.png" />
+                </figure>
+              </div>
+              <div id="Figure-32" class="figure">
+                <figure>
+                  <img src="figures/cat/cat5.png" style="width:90%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/cat/cat5.png" />
+                </figure>
+              </div>
+              <div id="Figure-33" class="figure">
+                <figure>
+                  <img src="figures/cat/cat6.png" style="width:90%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/cat/cat6.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="2" sectiontitle="" chapternumber="1" id="slide-11" data-y="3950" data-x="9350" data-z="0" subsectiontitle="Hydrodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Free surface flow: fast catamarans 2/2</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div id="video-3" class="video">
+            <video style="margin-top:1%;width:85%;" class="video-content" controls="controls" autoplay="autoplay">
+              <source src="videos/cat.m4v" />
+            </video>
+            <div class="video-caption">Fast catamaran in steady drift</div>
+          </div>
+          <div class="columns">
+            <div style="display:block;float:left;width:50%" class="column" column-number="1">
+              <div id="Figure-34" class="figure">
+                <figure>
+                  <img src="figures/cat/cat2.png" style="width:80%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/cat/cat2.png" />
+                  <div class="figure-caption">Stereo PIV</div>
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:50%" class="column" column-number="2">
+              <div id="Figure-35" class="figure">
+                <figure>
+                  <img src="figures/cat/cat3.png" style="width:80%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/cat/cat3.png" />
+                  <div class="figure-caption">CFD</div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="3" sectiontitle="" chapternumber="1" id="slide-12" data-y="3950" data-x="8300" data-z="0" subsectiontitle="Aerodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Renewable Energy: Horizontal Axis Wind Turbine 1/2</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div class="columns">
+            <div style="display:block;float:left;width:50%" class="column" column-number="1">
+              <div id="note-13" class="note">
+                <div class="note-caption">Wakebench Project</div>
+                <div class="note-content">
+                  <ul>
+                    <li>framework:<ul><li>International Energy Agency (IEA) Co-operation;</li></ul></li>
+                    <li>aims:<ul><li>validate Xnavis for Renewable applications;</li><li>reproduce NTNU blind tests experiments:<ul><li>model scale Horizontal Axis Wind Turbine performances and flow feattures (wakes);</li><li>farm of model scale Horizontal Axis Wind Turbine;</li><li>relevant blockage effects;</li></ul></li></ul></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:50%" class="column" column-number="2">
+              <div id="Figure-36" class="figure">
+                <figure>
+                  <img src="figures/bt2/bt2-01.png" style="width:120%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/bt2-01.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div style="display:block;float:left;width:50%" class="column" column-number="1">
+              <div id="Figure-37" class="figure">
+                <figure>
+                  <img src="figures/bt2/bt2-07.png" style="width:85%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/bt2-07.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:50%" class="column" column-number="2">
+              <div id="Figure-38" class="figure">
+                <figure>
+                  <img src="figures/bt2/bt2-08.png" style="width:85%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/bt2-08.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="3" sectiontitle="" chapternumber="1" id="slide-13" data-y="3950" data-x="7250" data-z="0" subsectiontitle="Aerodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Renewable Energy: Horizontal Axis Wind Turbine 2/2</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div class="columns">
+            <div style="display:block;float:left;width:32%" class="column" column-number="1">
+              <div id="Figure-39" class="figure">
+                <figure>
+                  <img src="figures/bt2/alpha-vorticity-side-view-l1.png" style="width:140%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/alpha-vorticity-side-view-l1.png" />
+                </figure>
+              </div>
+              <div id="Figure-40" class="figure">
+                <figure>
+                  <img src="figures/bt2/alpha-vorticity-side-view-l7.png" style="width:140%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/alpha-vorticity-side-view-l7.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:32%" class="column" column-number="2">
+              <div id="Figure-41" class="figure">
+                <figure>
+                  <img src="figures/bt2/alpha-vorticity-side-view-l3.png" style="width:140%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/alpha-vorticity-side-view-l3.png" />
+                </figure>
+              </div>
+              <div id="Figure-42" class="figure">
+                <figure>
+                  <img src="figures/bt2/alpha-vorticity-side-view-l9.png" style="width:140%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/alpha-vorticity-side-view-l9.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:32%" class="column" column-number="3">
+              <div id="Figure-43" class="figure">
+                <figure>
+                  <img src="figures/bt2/alpha-vorticity-side-view-l5.png" style="width:140%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/alpha-vorticity-side-view-l5.png" />
+                </figure>
+              </div>
+              <div id="Figure-44" class="figure">
+                <figure>
+                  <img src="figures/bt2/alpha-vorticity-side-view-l11.png" style="width:140%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/bt2/alpha-vorticity-side-view-l11.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="3" sectiontitle="" chapternumber="1" id="slide-14" data-y="3850" data-x="6200" data-z="0" subsectiontitle="Aerodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">External Aerodynamic Heating of Vega Launcher</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div class="columns">
+            <div style="display:block;float:left;width:50%;font-size:90%" class="column" column-number="1">
+              <div id="note-14" class="note">
+                <div class="note-caption">European Space Agency Collaboration</div>
+                <div class="note-content">
+                  <ul>
+                    <li>aims:<ul><li>validate Xnavis for compressible applications;</li><li>reproduce the Vega Launcher aerodynamic heating;<ul><li>termical loads on stages connectors;</li></ul></li></ul></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:50%" class="column" column-number="2">
+              <div id="Figure-45" class="figure">
+                <figure>
+                  <img src="figures/vega/vega01.png" style="width:120%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/vega/vega01.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div style="display:block;float:left;width:50%" class="column" column-number="1">
+              <div id="Figure-46" class="figure">
+                <figure>
+                  <img src="figures/vega/vega08.png" style="width:80%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/vega/vega08.png" />
+                </figure>
+              </div>
+              <div id="Figure-47" class="figure">
+                <figure>
+                  <img src="figures/vega/vega09.png" style="width:80%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/vega/vega09.png" />
+                </figure>
+              </div>
+            </div>
+            <div style="display:block;float:left;width:50%" class="column" column-number="2">
+              <div id="Figure-48" class="figure">
+                <figure>
+                  <img src="figures/vega/vega10.png" style="width:80%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/vega/vega10.png" />
+                </figure>
+              </div>
+              <div id="Figure-49" class="figure">
+                <figure>
+                  <img src="figures/vega/vega11.png" style="width:70%;box-shadow: 7px 7px 5px rgba(0,0,0,0.0)" class="figure-content" alt="Figure-figures/vega/vega11.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-scale="1" subsectionnumber="3" sectiontitle="" chapternumber="1" id="slide-15" data-y="3450" data-x="5150" data-z="0" subsectiontitle="Aerodynamics Experiments" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" sectionnumber="1" class="step slide" chaptertitle="">
+        <div style="clear: both;"></div>
+        <div class="slide-header-1">
+          <span style="padding:0% 0%;font-size:150%;float:left;font-variant:small-caps;" class="metadata">Gas Dynamics</span>
+          <img src="figures/cnr-insean.png" alt="figures/cnr-insean.png" style="height:100%;float:right;" />
+          <span style="controls:;font-size:70%;font-variant:small-caps;float:right;" class="timercontainer">
+            <div class="countDown">
+              <div class="timer"></div>
+              <div class="timercontrols">
+                <input onclick="resetCountdown(15);" type="button" class="btn reset" value=" &#10227; " title="reset"></input>
+                <input onclick="stopCountdown();" type="button" class="btn stop" value=" &#9724; " title="pause"></input>
+                <input onclick="startCountdown();" type="button" class="btn start" value=" &#9654; " title="start"></input>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="slide-header-2"></div>
+        <div class="slide-content">
+          <div class="columns">
+            <div style="display:block;float:left;width:25%" class="column" column-number="1">
+              <div id="note-15" class="note">
+                <div class="note-caption">OFF, a new CFD Solver</div>
+                <div class="note-content">
+                  <ul>
+                    <li>aims:<ul><li>compressible flows;</li><li>multi-specie flows;</li><li>multi-phase flows;</li><li>very high-order methods;</li><li>adaptive mesh refinement;</li></ul></li>
+                    <li>free;</li>
+                    <li>OOP;</li>
+                    <li>modern Fortran;</li>
+                  </ul>
+                </div>
+              </div>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <h5>https://github.com/szaghi/OFF</h5>
+            </div>
+            <div style="display:block;float:left;width:75%" class="column" column-number="2">
+              <div id="video-4" class="video">
+                <video style="margin-top:0%;width:95%;" class="video-content" controls="controls" autoplay="autoplay">
+                  <source src="videos/ujt.m4v" />
+                </video>
+                <div class="video-caption">Strongly Under-Expanded Jets Transient</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/countDown.js"></script>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+    <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+              inlineMath: [ ['$','$'] ],
+              displayMath: [ ['$$','$$'] ],
+              processEscapes: true
+            },
+            "HTML-CSS": { availableFonts: ["Neo-Euler"] }
+          });
+        </script>
+    <script src="js/MathJax/MathJax.js" type="text/javascript"></script>
+    <script src="js/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
